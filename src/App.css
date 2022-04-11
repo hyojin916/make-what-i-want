@@ -1,38 +1,158 @@
-.App {
-  text-align: center;
+body {
+  position: relative;
+  background-color: rgb(23, 31, 60);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.center {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.emoji-area {
+  position: relative;
+  margin-top: 100px;
+  min-width: 700px;
+  min-height: 700px;
+  background-color: rgb(202, 202, 184);
+  font-size: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.hi {
+  position: absolute;
+  animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+  animation-name: hi;
+  -moz-animation-name: hi;
+  -webkit-animation-name: hi;
+  animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  -webkit-animation-direction: alternate;
+}
+
+@keyframes hi {
+  0% {
+    margin-left: 90%;
   }
-  to {
+
+  100% {
+    margin-left: 0%;
+  }
+}
+
+.bye {
+  position: absolute;
+  margin-top: 82%;
+  animation-duration: 0.5s;
+  animation-name: bye;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bye {
+  0% {
+    margin-top: 82%;
+  }
+
+  50% {
+    margin-top: 50%;
+  }
+
+  100% {
+    margin-top: 82%;
+  }
+}
+
+.dance {
+  position: absolute;
+  margin-top: 50%;
+  margin-left: 100%;
+  animation-duration: 3s;
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+    margin-left: 2%;
+    display: block;
+  }
+  10% {
+    transform: rotate(90deg);
+    margin-top: 10%;
+  }
+  20% {
+    transform: rotate(180deg);
+    margin-left: 20%;
+  }
+  30% {
+    transform: rotate(270deg);
+    margin-left: 30%;
+    margin-top: 20%;
+  }
+  45% {
     transform: rotate(360deg);
+    margin-left: 40%;
+  }
+  50% {
+    transform: rotate(0deg);
+    margin-left: 50%;
+    margin-top: 30%;
+  }
+  60% {
+    transform: rotate(90deg);
+    margin-left: 60%;
+  }
+  70% {
+    transform: rotate(180deg);
+    margin-left: 70%;
+    margin-top: 20%;
+  }
+  80% {
+    transform: rotate(360deg);
+    margin-left: 80%;
+  }
+  90% {
+    transform: rotate(0deg);
+    margin-left: 90%;
+    margin-top: 30%;
+  }
+  100% {
+    transform: rotate(90deg);
+    margin-left: 100%;
+    margin-top: 10%;
+  }
+}
+
+.disappear {
+  position: absolute;
+  top: 0%;
+  right: 30%;
+  font-size: 0px;
+  animation-delay: 2s;
+  animation-duration: 8s;
+  opacity: 0;
+  animation-name: disappear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes disappear {
+  0% {
+    font-size: 0px;
+    opacity: 0;
+  }
+  50% {
+    font-size: 300px;
+    opacity: 0.5;
+  }
+  100% {
+    font-size: 0px;
+    opacity: 0;
+    margin-top: 80%;
   }
 }
