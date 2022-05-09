@@ -1,0 +1,94 @@
+// * 100%: 부모의 100%, 100vh: 부모와 상관 없이 화면의 전체높이
+
+.landing-wrapper {
+  background-color: rgba(220, 157, 84, 0.152);
+  height: 100%;
+  .first-area {
+    background-image: url("../assets/images/stars\ android-iphone-desktop-hd-backgrounds-wallpapers-1080p-4k-fbr8b-1920x1080.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+
+    .overlay {
+      position: absolute;
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+      background: rgba(24, 24, 23, 0.526);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .hook-message {
+        font-size: 50px;
+      }
+    }
+  }
+
+  // * 1. sticky-container (가장 바깥쪽에 위치) = position 설정을 따로 해주지 않아도 된다.
+  .sticky-container {
+    // * 2. sticky
+    .second-area {
+      // TODO
+      position: sticky;
+
+      background-color: rgba(171, 141, 204, 0.52);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      // * slide-container
+      .info-div {
+        // TODO
+        position: relative;
+        display: flex;
+        align-items: center;
+        // height: 100%;
+
+        .info-text {
+          border: 1px solid gray;
+          border-radius: 8px;
+          padding: 30px;
+          width: 50%;
+          margin-left: 30px;
+          .info-header {
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 30px;
+          }
+        }
+
+        // * 4. slide 요소
+        .slide {
+          // TODO
+          position: absolute;
+          right: 5%;
+
+          width: 40%;
+          padding: 30px;
+          img {
+            top: 0;
+            border-radius: 10px;
+          }
+        }
+
+        .dog {
+          animation-name: dog;
+          animation-duration: 0.8s;
+        }
+
+        @keyframes dog {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

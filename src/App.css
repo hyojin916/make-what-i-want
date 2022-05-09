@@ -1,6 +1,6 @@
 body {
-  position: relative;
-  background-color: rgb(23, 31, 60);
+  /* position: relative;
+  background-color: rgb(23, 31, 60); */
 }
 
 .center {
@@ -19,17 +19,26 @@ body {
   font-size: 100px;
 }
 
+/* 
+* * 여기서는 className이랑 똑같이 했지만, 
+* * 애니메이션 이름을 지정하면 다른 element에도 간편하게 적용할 수 있당. 
+*/
+
 .hi {
   position: absolute;
-  animation-duration: 2s;
-  -moz-animation-duration: 2s;
-  -webkit-animation-duration: 2s;
+  /** 이름*/
   animation-name: hi;
   -moz-animation-name: hi;
   -webkit-animation-name: hi;
+  /** duration*/
+  animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+  /** iteration-count*/
   animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
+  /** direction*/
   animation-direction: alternate;
   -moz-animation-direction: alternate;
   -webkit-animation-direction: alternate;
@@ -48,12 +57,12 @@ body {
 .bye {
   position: absolute;
   margin-top: 82%;
+  animation-name: jump;
   animation-duration: 0.5s;
-  animation-name: bye;
   animation-iteration-count: infinite;
 }
 
-@keyframes bye {
+@keyframes jump {
   0% {
     margin-top: 82%;
   }
@@ -72,11 +81,11 @@ body {
   margin-top: 50%;
   margin-left: 100%;
   animation-duration: 3s;
-  animation-name: rotate;
+  animation-name: dance;
   animation-iteration-count: infinite;
 }
 
-@keyframes rotate {
+@keyframes dance {
   0% {
     transform: rotate(0);
     margin-left: 2%;
@@ -134,10 +143,10 @@ body {
   top: 0%;
   right: 30%;
   font-size: 0px;
-  animation-delay: 2s;
-  animation-duration: 8s;
   opacity: 0;
   animation-name: disappear;
+  animation-delay: 2s;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
 }
 
