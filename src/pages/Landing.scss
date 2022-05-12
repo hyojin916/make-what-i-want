@@ -3,12 +3,16 @@
 .landing-wrapper {
   background-color: rgba(220, 157, 84, 0.152);
   height: 100%;
+
+  .area {
+    height: 100vh;
+  }
+
   .first-area {
     background-image: url("../assets/images/stars\ android-iphone-desktop-hd-backgrounds-wallpapers-1080p-4k-fbr8b-1920x1080.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 100vh;
     color: white;
 
     .overlay {
@@ -31,11 +35,12 @@
   .sticky-container {
     // * 2. sticky
     .second-area {
+      display: flex;
+      flex-direction: column;
       // TODO
       position: sticky;
 
       background-color: rgba(171, 141, 204, 0.52);
-      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -90,5 +95,8 @@
         }
       }
     }
+  }
+
+  .third-area {
   }
 }

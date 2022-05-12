@@ -13,11 +13,11 @@ const Landing = () => {
   return (
     <div className="landing-wrapper">
       {/* 1. hook message - 이미지 + text  */}
-      <div className="first-area">
+      <div className="first-area area">
         <div className="overlay">
           <TypeIt
             options={{
-              speed: 80,
+              //   speed: 1000,
               waitUntilVisible: true,
               loop: true,
               loopDelay: 5000,
@@ -29,12 +29,12 @@ const Landing = () => {
           </TypeIt>
         </div>
       </div>
-
       {/* 2. interavtive image showing - image  */}
       <div className="sticky-container" ref={stickyContainer}>
-        <div className="second-area sticky">
+        <div className="second-area area sticky">
           {/* 내부 슬라이드 */}
 
+          {/* 1 */}
           <div className="info-div slide-container">
             <div className="info-text">
               <h1 className="info-header">What dog is the best dog?</h1>
@@ -58,9 +58,11 @@ const Landing = () => {
           </div>
         </div>
       </div>
-
+      {/* 이미지 나오게  */}
+      <div className="third-area area">
+        <div className=""></div>
+      </div>
       {/* 3. responsive grid - position */}
-      {/* <div className="third-area"></div> */}
       <div className="first-area">
         <div className="overlay">
           <TypeIt
